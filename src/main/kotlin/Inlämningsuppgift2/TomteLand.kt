@@ -44,55 +44,13 @@ class Tomteland {
         val checkMe = mutableListOf(currentName)
         return inner(checkMe,res)
     }
-
 }
 fun main() {
 
     val tomteland = Tomteland()
-    //Exempel på anrop till den rekursiva funktionen getUnderlings,
-    // här är tanken att hitta Gladers underlydande
-    //listan fylls på successivt när vi rekurserar
 
     val list: MutableList<String> = mutableListOf()
     println(tomteland.getUnderlings("Glader", list))
     println()
 
 }
-
-// return if ( map[currentName].isNullOrEmpty()) res
-// else{
-//     res.add(map[currentName]!![0])
-//     for (i in 0 until map[currentName]!!.size){
-//         if (res.contains(map[currentName]!![i])) {
-//             val sendUnderling = map[currentName]!![0]
-//             map.remove(currentName)
-//             return getUnderlings(sendUnderling, res)
-//         }
-//     }
-//     return getUnderlings(res[res.size], res)
-// }
-
-
-
-//var map = mutableMapOf("Tomten" to listOf("Glader","Butter"),
-//    "Glader" to listOf("Trötter","Blyger", "Tröger"),
-//    "Butter" to listOf("Rådjuret","Nyckelpigan","Haren","Räven"),
-//    "Trötter" to listOf("Skumtomten"),
-//    "Skumtomten" to listOf("Dammråttan"),
-//    "Räven" to listOf("Gråsuggan", "Myran"),
-//    "Myran" to listOf("Bladlusen"))
-//
-//
-//fun getUnderlings(currentName: String, res: MutableList<String>): List<String> {
-//    res.add(currentName)
-//    fun inner(res : MutableList<String>): List<String>{
-//        var foundAll = false
-//        for (i in 0 until res.size)
-//            if(!map[res[res.size-1]].isNullOrEmpty()){
-//                res.addAll(map[res[res.size-1]]!!)
-//            }
-//        return inner(res)
-//    }
-//    inner(res)
-//    return res
-//}
